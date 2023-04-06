@@ -1,8 +1,8 @@
 SRCS = main.cpp App.cpp Menu.cpp
 EXE = movies
 
-BRIDGES_CXXFLAGS=-I../bridges/include
-BRIDGES_LDFLAGS=-L../bridges/lib
+BRIDGES_CXXFLAGS=-I/Users/vtn2/classes/cs112/src/bridges/bridges/include
+BRIDGES_LDFLAGS=-L/Users/vtn2/classes/cs112/src/bridges/bridges/lib
 
 # Everything below that should not have to change ever.
 

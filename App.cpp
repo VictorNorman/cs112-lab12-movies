@@ -76,12 +76,15 @@ void App::showAllMoviesForAnActor() {
 
     for (db_iter it = movies_by_name.begin(); it != movies_by_name.end();
          ++it) {
-        for (set<string>::iterator actors_it = it->second.begin();
-             actors_it != it->second.end(); ++actors_it) {
-            if (*actors_it == actor_name) {
-                movies_by_actor.insert(it->first);
-            }
+        if (it->second.find(actor_name) != it->second.end()) {
+            movies_by_actor.insert(it->first);
         }
+        // for (set<string>::iterator actors_it = it->second.begin();
+        //      actors_it != it->second.end(); ++actors_it) {
+        //     if (*actors_it == actor_name) {
+        //         movies_by_actor.insert(it->first);
+        //     }
+        // }
     }
 
     for (set<string>::iterator it = movies_by_actor.begin();
