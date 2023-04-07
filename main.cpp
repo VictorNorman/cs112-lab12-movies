@@ -14,8 +14,12 @@ using namespace bridges;
 
 
 int main(int argc, char** argv) {
+    if (argc != 3) {
+        cerr << "Usage: ./movies <BridgesUserName> <BridgesId>\n";
+        exit(-1);
+    }
     // create Bridges object
-    Bridges bridges(73, "VictorNorman", "1313148564240");
+    Bridges bridges(73, argv[1], argv[2]);
     DataSource ds(&bridges);
 
     int start_year, end_year;
